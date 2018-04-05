@@ -31,6 +31,7 @@ public class HandClick : MonoBehaviour
 		}
 		lastTrigger = controllerTrigger;
 	}
+	void DoClick()
 	{
 		if (theClosestGO != null) {
 			VRInteractiveItem interactible =
