@@ -1,18 +1,24 @@
 fileFormatVersion: 2
-guid: efe9a50dd7a879649a8e2121638bc710
-timeCreated: 1523295645
+guid: 6afb4f17a819e7049827078b356a50a8
+timeCreated: 1523296073
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    100002: Mango
+    100004: Plane
+    400000: //RootNode
+    400002: Mango
+    400004: Plane
+    2100000: Material.Mango
+    2100002: Material Hoja
+    2300000: Mango
+    2300002: Plane
+    3300000: Mango
+    3300002: Plane
+    4300000: Mango
+    4300002: Plane
   externalObjects: {}
   materials:
     importMaterials: 1
