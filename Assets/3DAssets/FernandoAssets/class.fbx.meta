@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 52788a643400c2e42ab33270e8b2906f
+timeCreated: 1523318475
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Area
+    100002: Blinds_009
+    100004: Box098
+    100006: Box099
+    100008: Box49
+    100010: //RootNode
+    100012: Door
+    100014: DoorWay
+    100016: Doorway_Glass
+    100018: Geen_Board001
+    100020: Geen_Board002
+    100022: Keyboard005
+    100024: Lamp_008
+    100026: Monitor005
+    100028: PC005
+    100030: Poster_005
+    100032: Poster_009
+    100034: Poster_010
+    100036: Poster_011
+    100038: Poster_012
+    100040: Poster_013
+    100042: Poster_015
+    100044: Poster_018
+    100046: Poster_019
+    100048: Table
+    100050: Table_001
+    100052: Teachers_Board
+    100054: Walls
+    100056: Window_Frame_004
+    400000: Area
+    400002: Blinds_009
+    400004: Box098
+    400006: Box099
+    400008: Box49
+    400010: //RootNode
+    400012: Door
+    400014: DoorWay
+    400016: Doorway_Glass
+    400018: Geen_Board001
+    400020: Geen_Board002
+    400022: Keyboard005
+    400024: Lamp_008
+    400026: Monitor005
+    400028: PC005
+    400030: Poster_005
+    400032: Poster_009
+    400034: Poster_010
+    400036: Poster_011
+    400038: Poster_012
+    400040: Poster_013
+    400042: Poster_015
+    400044: Poster_018
+    400046: Poster_019
+    400048: Table
+    400050: Table_001
+    400052: Teachers_Board
+    400054: Walls
+    400056: Window_Frame_004
+    2100000: Lamp_Reflective
+    2100002: Lamps
+    2100004: Tables.001
+    2100006: Projector Screen
+    2100008: Metal
+    2100010: Projector
+    2100012: Posters.001
+    2100014: Teachers board
+    2100016: PC.001
+    2100018: Plastic
+    2100020: Wood.001
+    2100022: Tables
+    2100024: Door
+    2100026: Posters
+    2100028: Glass
+    2100030: Wood
+    2100032: No Name
+    2100034: Green_Board.001
+    2300000: Blinds_009
+    2300002: Box098
+    2300004: Box099
+    2300006: Box49
+    2300008: Door
+    2300010: DoorWay
+    2300012: Doorway_Glass
+    2300014: Geen_Board001
+    2300016: Keyboard005
+    2300018: Lamp_008
+    2300020: Monitor005
+    2300022: PC005
+    2300024: Poster_005
+    2300026: Poster_009
+    2300028: Poster_010
+    2300030: Poster_011
+    2300032: Poster_012
+    2300034: Poster_013
+    2300036: Poster_015
+    2300038: Poster_018
+    2300040: Poster_019
+    2300042: Table
+    2300044: Table_001
+    2300046: Teachers_Board
+    2300048: Walls
+    2300050: Window_Frame_004
+    3300000: Blinds_009
+    3300002: Box098
+    3300004: Box099
+    3300006: Box49
+    3300008: Door
+    3300010: DoorWay
+    3300012: Doorway_Glass
+    3300014: Geen_Board001
+    3300016: Keyboard005
+    3300018: Lamp_008
+    3300020: Monitor005
+    3300022: PC005
+    3300024: Poster_005
+    3300026: Poster_009
+    3300028: Poster_010
+    3300030: Poster_011
+    3300032: Poster_012
+    3300034: Poster_013
+    3300036: Poster_015
+    3300038: Poster_018
+    3300040: Poster_019
+    3300042: Table
+    3300044: Table_001
+    3300046: Teachers_Board
+    3300048: Walls
+    3300050: Window_Frame_004
+    4300000: Lamp_008
+    4300002: Table_001
+    4300004: Box099
+    4300006: Box49
+    4300008: Box098
+    4300010: Poster_013
+    4300012: Poster_019
+    4300014: Poster_005
+    4300016: Poster_009
+    4300018: Poster_010
+    4300020: Poster_018
+    4300022: Poster_015
+    4300024: Teachers_Board
+    4300026: Monitor005
+    4300028: PC005
+    4300030: Keyboard005
+    4300032: Blinds_009
+    4300034: Window_Frame_004
+    4300036: Table
+    4300038: Door
+    4300040: Poster_012
+    4300042: Poster_011
+    4300044: Doorway_Glass
+    4300046: DoorWay
+    4300048: Walls
+    4300050: Geen_Board001
+    10800000: Area
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
