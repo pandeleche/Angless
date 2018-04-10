@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour {
 	public void LoadGame()
 	{
-		SceneManager.LoadScene("Door_project", LoadSceneMode.Single);
+		SceneManager.LoadScene("Classroom_Level", LoadSceneMode.Single);
 	}
 	public void ExitGame()
 	{
