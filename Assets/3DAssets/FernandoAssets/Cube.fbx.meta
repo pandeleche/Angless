@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: da518edc76912e941a8b0a12d01aac7c
-timeCreated: 1523532031
+guid: 1404b5f6a942dd846af1b4b1271d33b5
+timeCreated: 1523534051
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -17,10 +17,8 @@ ModelImporter:
     100018: Bone.008
     100020: Bone.009
     100022: Bone.009_end
-    100024: Camera
-    100026: //RootNode
-    100028: Lamp
-    100030: Plane
+    100024: //RootNode
+    100026: Plane
     400000: Armature
     400002: Bone
     400004: Bone.001
@@ -33,16 +31,12 @@ ModelImporter:
     400018: Bone.008
     400020: Bone.009
     400022: Bone.009_end
-    400024: Camera
-    400026: //RootNode
-    400028: Lamp
-    400030: Plane
-    2000000: Camera
+    400024: //RootNode
+    400026: Plane
     2100000: No Name
     4300000: Plane
     7400000: Armature|ArmatureAction
     9500000: //RootNode
-    10800000: Lamp
     13700000: Plane
   externalObjects: {}
   materials:
@@ -53,7 +47,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleCurves: 0
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
@@ -70,7 +64,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
