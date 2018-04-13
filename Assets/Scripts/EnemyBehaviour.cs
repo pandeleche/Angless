@@ -17,7 +17,7 @@ public class EnemyBehaviour : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();
        // enemyHealth = GetComponent<EnemyHealth>();
-        nav = gameObject.AddComponent<NavMeshAgent>();
+        nav = GetComponent<NavMeshAgent>();
         //nav.Warp(player.position);
     }
 

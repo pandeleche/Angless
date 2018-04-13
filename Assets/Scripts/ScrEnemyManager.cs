@@ -7,6 +7,8 @@ public class ScrEnemyManager : MonoBehaviour {
     public GameObject square;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
+
+    
     // Use this for initialization
     void Start()
     {
@@ -18,7 +20,9 @@ public class ScrEnemyManager : MonoBehaviour {
     {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
         GameObject saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        saux.AddComponent<EnemyBehaviour>();
+        //saux.AddComponent<EnemyBehaviour>();
+        //anim = saux.GetComponent<Animator>();
+        //anim.SetFloat(0.3f,)
     }
 }
 
