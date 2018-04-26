@@ -11,6 +11,7 @@ public class EnemyBehaviour : MonoBehaviour {
     NavMeshAgent nav;               // Reference to the nav mesh agent.
 
 
+
     void Awake()
     {
         // Set up the references.

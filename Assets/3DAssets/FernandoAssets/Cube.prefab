@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 33699198260906446}
   - component: {fileID: 195497274368031748}
   - component: {fileID: 114642753018546954}
+  - component: {fileID: 114611692491134614}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Cutable
@@ -625,6 +626,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114611692491134614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351829948939490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061126307c0f6be4fad0fcf873d921f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 0}
 --- !u!114 &114642753018546954
 MonoBehaviour:
   m_ObjectHideFlags: 1
