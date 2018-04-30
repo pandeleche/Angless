@@ -642,6 +642,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!114 &114642753018546954
 MonoBehaviour:
   m_ObjectHideFlags: 1
