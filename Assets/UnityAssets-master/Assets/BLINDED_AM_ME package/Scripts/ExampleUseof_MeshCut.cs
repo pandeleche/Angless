@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.AI;
 
 public class ExampleUseof_MeshCut : MonoBehaviour {
 
@@ -22,11 +24,22 @@ public class ExampleUseof_MeshCut : MonoBehaviour {
 
 				GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
-				if(!pieces[1].GetComponent<Rigidbody>())
-					pieces[1].AddComponent<Rigidbody>();
+                if (!pieces[1].GetComponent<Rigidbody>())
+                {
+                    pieces[1].AddComponent<Rigidbody>();
+                    pieces[1].AddComponent<BoxCollider>();
+                }
 
-				Destroy(pieces[1], 1);
-			}
+                if (!pieces[0].GetComponent<Rigidbody>())
+                {
+                    pieces[0].GetComponent<NavMeshAgent>().enabled = false;
+                    pieces[0].AddComponent<Rigidbody>();
+                    pieces[0].AddComponent<BoxCollider>();
+                }
+
+                Destroy(pieces[1], 3);
+                Destroy(pieces[0], 3);
+            }
 
 		}
 	}

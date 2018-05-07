@@ -160,6 +160,8 @@ namespace BLINDED_AM_ME{
 			leftSideObj.GetComponent<MeshRenderer>().materials = mats;
 			rightSideObj.GetComponent<MeshRenderer>().materials = mats;
 
+            leftSideObj.tag = "Finish";
+
 			return new GameObject[]{ leftSideObj, rightSideObj };
 
 		}
