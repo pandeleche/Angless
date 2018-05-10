@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d80815a42a478e4993f9e78d37e010e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  square: {fileID: 1572131176492822, guid: 8ffdf352e433e6a4891cfb859cc9d9d9, type: 2}
+  square: {fileID: 1156831914061164, guid: 1b4f318df694ce548bf1b4167111ca4b, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1965404531}
