@@ -189,7 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   Screen_canvas_text: {fileID: 114202367501898916}
-  Restart_prefab: {fileID: 0}
+  Restart_prefab: {fileID: 1717387110218712, guid: 6720939eed7c1c54293c4fa28fe62214,
+    type: 2}
 --- !u!114 &114434130407248160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,7 +219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 114028617595962784}
-  transparency: 1
 --- !u!114 &114947934021461002
 MonoBehaviour:
   m_ObjectHideFlags: 1
