@@ -17,7 +17,6 @@ public class ScoreScript : MonoBehaviour {
 		int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos (Mathf.Deg2Rad * rotation.z)))*100);
 		score += increasing;
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		text_score.text = "Score: " + score;

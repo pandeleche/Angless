@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TransparencyScript : MonoBehaviour {
 
 	public Image image;
-	public float transparency;
+	private float transparency=1;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,5 +17,11 @@ public class TransparencyScript : MonoBehaviour {
 		Color color = image.material.color;
 		color.a = transparency;
 		image.material.color = color;
+	}
+	void DecreaseTransparency(){
+		transparency = transparency - 0.2f;
+	}
+	void IncreaseTransparency(){
+		transparency = transparency + 0.2f;
 	}
 }

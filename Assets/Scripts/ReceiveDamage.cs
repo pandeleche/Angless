@@ -6,6 +6,7 @@ public class ReceiveDamage : MonoBehaviour {
 
 	private int Heatlh_Points = 5;
 	public LoseMessage lose;
+	public TransparencyScript transparency;
 	// Use this for initialization
 	void Start () {
 	}
@@ -18,6 +19,7 @@ public class ReceiveDamage : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if (collision.gameObject.tag.Equals("Cutable")) {
 			Heatlh_Points--;
+			transparency.Invoke ("DecreaseTransparency", 0.1f);
 		}
 		if (Heatlh_Points == 0) {
 			lose.Invoke ("Player_lose",1);
