@@ -187,7 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a82f32822d9a01e409293b074beeb5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   Screen_canvas_text: {fileID: 114202367501898916}
+  Restart_prefab: {fileID: 0}
 --- !u!114 &114434130407248160
 MonoBehaviour:
   m_ObjectHideFlags: 1
