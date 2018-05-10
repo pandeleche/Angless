@@ -2,9 +2,12 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour {
-	public void LoadGame()
+	public void LoadGame(string scene_name)
 	{
-		SceneManager.LoadScene("Classroom_Level", LoadSceneMode.Single);
+		SceneManager.LoadScene(scene_name, LoadSceneMode.Single);
+	}
+	public void RestartGame(){
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 	public void ExitGame()
 	{
