@@ -516,7 +516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -692,7 +692,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4643389703647418, guid: d31c0235069d9eb4d8cb71f5b4967aac, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.39
+      value: 5.16
       objectReference: {fileID: 0}
     - target: {fileID: 4643389703647418, guid: d31c0235069d9eb4d8cb71f5b4967aac, type: 2}
       propertyPath: m_LocalRotation.x
@@ -731,9 +731,20 @@ Prefab:
       propertyPath: m_Name
       value: RealSword
       objectReference: {fileID: 0}
+    - target: {fileID: 114156990454560444, guid: d31c0235069d9eb4d8cb71f5b4967aac,
+        type: 2}
+      propertyPath: text_score
+      value: 
+      objectReference: {fileID: 1698993915}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d31c0235069d9eb4d8cb71f5b4967aac, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1698993915 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114947934021461002, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029429969}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1965404530
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +875,7 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 983343771}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114001494303911654, guid: c3af88e28bf7c0d4ab96783ddabbbf0b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c3af88e28bf7c0d4ab96783ddabbbf0b, type: 2}
   m_IsPrefabParent: 0

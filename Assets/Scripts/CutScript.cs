@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class CutScript : MonoBehaviour {
 
+    //This is the material of the cutscript
     public Material capMaterial;
+
+    //This is for the score of the cut
+    public Text text_score;
+    private int score = 0;
+    private float perfect_cut_cos = Mathf.Cos(Mathf.PI / 4);
+
 
     private void OnCollisionEnter(Collision other)
     {
@@ -28,8 +36,20 @@ public class CutScript : MonoBehaviour {
                 pieces[0].AddComponent<BoxCollider>();
             }
 
+            
+
             Destroy(pieces[1], 3);
             Destroy(pieces[0], 3);
+            CutDone(transform.rotation.eulerAngles);
         }
     }
+
+    //Calculates the score of the cut depending on the roll of the sword
+    void CutDone(Vector3 rotation)
+    {
+        int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z))) * 100);
+        score += increasing;
+        text_score.text = "Score: " + score;
+    }
 }
+
