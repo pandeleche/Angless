@@ -160,6 +160,8 @@ namespace BLINDED_AM_ME{
 			leftSideObj.GetComponent<MeshRenderer>().materials = mats;
 			rightSideObj.GetComponent<MeshRenderer>().materials = mats;
 
+            
+            //change the tag in order to don do it cuttable
             leftSideObj.tag = "Finish";
 
 			return new GameObject[]{ leftSideObj, rightSideObj };
