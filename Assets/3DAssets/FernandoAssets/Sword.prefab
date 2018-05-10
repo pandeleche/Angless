@@ -153,3 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab866131cb3fd2a45a567509ffd83b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capMaterial: {fileID: 2100000, guid: 7998d821992d01b47958d7db3e18193c, type: 2}
+  text_score: {fileID: 114947934021461002, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
+    type: 2}

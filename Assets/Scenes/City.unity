@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.097325064, g: 0.14112948, b: 0.20868298, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -226,11 +226,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4472548270292026, guid: 856ef653ecb3b4b419b3ebb4afa8d244, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.056
+      value: 0.083
       objectReference: {fileID: 0}
     - target: {fileID: 4472548270292026, guid: 856ef653ecb3b4b419b3ebb4afa8d244, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.682
       objectReference: {fileID: 0}
     - target: {fileID: 4472548270292026, guid: 856ef653ecb3b4b419b3ebb4afa8d244, type: 2}
       propertyPath: m_LocalRotation.x
@@ -724,7 +724,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 114156990454560444, guid: d31c0235069d9eb4d8cb71f5b4967aac,
         type: 2}
       propertyPath: capMaterial
@@ -747,7 +746,15 @@ Prefab:
       propertyPath: text_score
       value: 
       objectReference: {fileID: 1698993915}
->>>>>>> d1922a71309e9bb0aab844c1789a3bdd5e6b9f91
+    - target: {fileID: 1181968357139474, guid: e714234f85d0ace48858b4cc2f5b0083, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114278742646907974, guid: e714234f85d0ace48858b4cc2f5b0083,
+        type: 2}
+      propertyPath: text_score
+      value: 
+      objectReference: {fileID: 1698993915}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e714234f85d0ace48858b4cc2f5b0083, type: 2}
   m_IsPrefabParent: 0

@@ -48,7 +48,11 @@ public class CutScript : MonoBehaviour {
     void CutDone(Vector3 rotation)
     {
         int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z))) * 100);
-        score += increasing;
+        if (increasing > 0)
+        {
+            score += increasing;
+        }
+        else { score++; }
         text_score.text = "Score: " + score;
     }
 }
