@@ -342,9 +342,9 @@ namespace Valve.VR.InteractionSystem
 			if ( ( itemPackage.otherHandItemPrefab != null ) && ( hand.otherHand.controller != null ) )
 			{
 				GameObject otherHandObjectToAttach = GameObject.Instantiate( itemPackage.otherHandItemPrefab );
-				otherHandObjectToAttach.SetActive( true );
+                otherHandObjectToAttach.SetActive( true );
 				hand.otherHand.AttachObject( otherHandObjectToAttach, attachmentFlags );
-			}
+            }
 
 			itemIsSpawned = true;
 

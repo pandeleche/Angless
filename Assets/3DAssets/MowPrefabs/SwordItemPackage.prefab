@@ -51,10 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f83db71b9a6764abf964ab7679f035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: CutreSword
+  name: RealSword
   packageType: 2
-  itemPrefab: {fileID: 1181968357139474, guid: e714234f85d0ace48858b4cc2f5b0083, type: 2}
-  otherHandItemPrefab: {fileID: 1181968357139474, guid: e714234f85d0ace48858b4cc2f5b0083,
+  itemPrefab: {fileID: 1020263673783924, guid: 6c42967e558c9c242964192b7b6b6354, type: 2}
+  otherHandItemPrefab: {fileID: 1020263673783924, guid: 6c42967e558c9c242964192b7b6b6354,
     type: 2}
   previewPrefab: {fileID: 1653251374851542, guid: e24a292d6cacc184fb006eadd426ba09,
     type: 2}

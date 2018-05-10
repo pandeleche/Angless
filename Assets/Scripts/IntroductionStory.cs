@@ -31,8 +31,10 @@ public class IntroductionStory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		story_text.text = story[count];
-		story_text.fontSize = 32;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Clicked();
+        }
 	}
 	public void Clicked(){
 		if (count < story.Length - 1) {
