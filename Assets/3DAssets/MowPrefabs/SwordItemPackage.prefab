@@ -53,8 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: CutreSword
   packageType: 2
-  itemPrefab: {fileID: 1726000011416504, guid: 67320db467b1300458af92b59f74cbda, type: 2}
-  otherHandItemPrefab: {fileID: 1726000011416504, guid: 67320db467b1300458af92b59f74cbda,
+  itemPrefab: {fileID: 1181968357139474, guid: e714234f85d0ace48858b4cc2f5b0083, type: 2}
+  otherHandItemPrefab: {fileID: 1181968357139474, guid: e714234f85d0ace48858b4cc2f5b0083,
     type: 2}
   previewPrefab: {fileID: 1653251374851542, guid: e24a292d6cacc184fb006eadd426ba09,
     type: 2}
