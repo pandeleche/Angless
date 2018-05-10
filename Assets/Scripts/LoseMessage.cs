@@ -17,8 +17,9 @@ public class LoseMessage : MonoBehaviour {
 		
 	}
 	void Player_lose(){
-		GameObject aux =Instantiate (Restart_prefab,player,true);
-		aux.transform.position.x += 0.5;
+		Transform aux = player;
+		aux.position += new Vector3(0.5f,0.0f,0.0f);
+		Instantiate (Restart_prefab,aux,true);
 		Screen_canvas_text.text = "YOU LOSE";
 		Screen_canvas_text.fontSize = 50;
 	}
