@@ -17,7 +17,7 @@ public class TransparencyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Color color = image.material.color;
-		color.a = transparency;
+		color.a = alpha;
 		image.material.color = color;
 	}
 	void DecreaseTransparency(){
