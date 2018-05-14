@@ -14,13 +14,20 @@ public class CutScript : MonoBehaviour {
     public static int score = 0;
     private float perfect_cut_cos = Mathf.Cos(Mathf.PI / 4);
 
+    AudioSource enemyAudio;                     // Reference to the audio source.
 
+    private void Awake()
+    {
+        enemyAudio = GetComponent<AudioSource>();
+    }
     private void OnCollisionEnter(Collision other)
     {
         GameObject victim = other.collider.gameObject;
 
         if (victim.CompareTag("Cutable"))
         {
+            enemyAudio.Play();
+
             GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
             if (!pieces[1].GetComponent<Rigidbody>())
@@ -40,11 +47,31 @@ public class CutScript : MonoBehaviour {
 
             Destroy(pieces[1], 3);
             Destroy(pieces[0], 3);
+
             CutDone(transform.rotation.eulerAngles, 5);
         }
         else if (victim.CompareTag("CutableHacendado"))
         {
-            //CutDone(transform.rotation.eulerAngles, 1);
+            enemyAudio.Play();
+            GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+
+            if (!pieces[1].GetComponent<Rigidbody>())
+            {
+                pieces[1].AddComponent<Rigidbody>();
+                pieces[1].AddComponent<BoxCollider>();
+            }
+
+            if (!pieces[0].GetComponent<Rigidbody>())
+            {
+                pieces[0].GetComponent<NavMeshAgent>().enabled = false;
+                pieces[0].AddComponent<Rigidbody>();
+                pieces[0].AddComponent<BoxCollider>();
+            }
+
+
+
+            Destroy(pieces[1], 3);
+            Destroy(pieces[0], 3);
         }
     }
 
