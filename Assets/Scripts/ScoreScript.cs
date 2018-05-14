@@ -14,7 +14,7 @@ public class ScoreScript : MonoBehaviour {
 	}
 
 	void CutDone(Vector3 rotation){
-		int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos (Mathf.Deg2Rad * rotation.z)))*100);
+		int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.y)) - Mathf.Abs(Mathf.Cos (Mathf.Deg2Rad * rotation.y)))*100);
 		score += increasing;
 	}
 	// Update is called once per frame
