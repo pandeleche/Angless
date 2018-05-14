@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4920538748022224}
   - component: {fileID: 114484848751070526}
   - component: {fileID: 65632746942383416}
+  - component: {fileID: 82455006131513766}
   m_Layer: 0
   m_Name: RealSword
   m_TagString: Untagged
@@ -142,6 +143,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.003, y: 0.01, z: 0.06}
   m_Center: {x: 0.002, y: -0.0005, z: 0.042}
+--- !u!82 &82455006131513766
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1020263673783924}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0e220b97baa73db4fab6fba879e1b024, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114484848751070526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,5 +235,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capMaterial: {fileID: 2100000, guid: 7998d821992d01b47958d7db3e18193c, type: 2}
-  text_score: {fileID: 114947934021461002, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
-    type: 2}
