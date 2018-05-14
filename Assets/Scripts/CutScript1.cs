@@ -52,7 +52,31 @@ public class CutScript1 : MonoBehaviour {
                 Destroy(pieces[0], 3);
                 CutDone(transform.rotation.eulerAngles);
             }
-            
+            if (victim.tag.Equals("CutableHacendado"))
+            {
+                GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+
+                if (!pieces[1].GetComponent<Rigidbody>())
+                {
+                    pieces[1].AddComponent<Rigidbody>();
+                    pieces[1].AddComponent<BoxCollider>();
+                }
+
+                if (!pieces[0].GetComponent<Rigidbody>())
+                {
+                    pieces[0].GetComponent<NavMeshAgent>().enabled = false;
+                    pieces[0].AddComponent<Rigidbody>();
+                    pieces[0].AddComponent<BoxCollider>();
+                }
+
+
+
+                Destroy(pieces[1], 3);
+                Destroy(pieces[0], 3);
+                CutDone(transform.rotation.eulerAngles);
+            }
+
+
         }
     }
 

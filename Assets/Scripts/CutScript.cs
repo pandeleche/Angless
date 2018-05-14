@@ -11,7 +11,7 @@ public class CutScript : MonoBehaviour {
 
     //This is for the score of the cut
     public Text text_score;
-    private int score = 0;
+    public static int score = 0;
     private float perfect_cut_cos = Mathf.Cos(Mathf.PI / 4);
 
 
@@ -19,7 +19,7 @@ public class CutScript : MonoBehaviour {
     {
         GameObject victim = other.collider.gameObject;
 
-        if (victim.tag.Equals("Cutable"))
+        if (victim.CompareTag("Cutable"))
         {
             GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
@@ -40,19 +40,24 @@ public class CutScript : MonoBehaviour {
 
             Destroy(pieces[1], 3);
             Destroy(pieces[0], 3);
-            CutDone(transform.rotation.eulerAngles);
+            CutDone(transform.rotation.eulerAngles, 5);
+        }
+        else if (victim.CompareTag("CutableHacendado"))
+        {
+            CutDone(transform.rotation.eulerAngles, 1);
         }
     }
 
     //Calculates the score of the cut depending on the roll of the sword
-    void CutDone(Vector3 rotation)
+    void CutDone(Vector3 rotation, int points)
     {
-        int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z))) * 100);
-        if (increasing > 0)
-        {
-            score += increasing;
-        }
-        else { score++; }
+        //int increasing = Mathf.RoundToInt(Mathf.Abs(Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z)) - Mathf.Abs(Mathf.Cos(Mathf.Deg2Rad * rotation.z))) * 100);
+        //if (increasing > 0)
+        //{
+        //    score += increasing;
+        //}
+        //else { score++; }
+        score += points;
         text_score.text = "Score: " + score;
     }
 }
