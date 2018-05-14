@@ -10,7 +10,7 @@ public class CutScript : MonoBehaviour {
     public Material capMaterial;
 
     //This is for the score of the cut
-    public Text text_score;
+    
     public static int score = 0;
     private float perfect_cut_cos = Mathf.Cos(Mathf.PI / 4);
 
@@ -44,7 +44,7 @@ public class CutScript : MonoBehaviour {
         }
         else if (victim.CompareTag("CutableHacendado"))
         {
-            CutDone(transform.rotation.eulerAngles, 1);
+            //CutDone(transform.rotation.eulerAngles, 1);
         }
     }
 
@@ -58,7 +58,6 @@ public class CutScript : MonoBehaviour {
         //}
         //else { score++; }
         score += points;
-        text_score.text = "Score: " + score;
     }
 }
 
