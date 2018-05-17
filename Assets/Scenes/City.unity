@@ -864,10 +864,30 @@ Prefab:
     - {fileID: 114000011983135080, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1005454606 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
+  m_PrefabInternal: {fileID: 1005454605}
 --- !u!1 &1014241638 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 191996, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
   m_PrefabInternal: {fileID: 1005454605}
+--- !u!114 &1014241639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1014241638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b70d3485cc764f4daac4e53460a6079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lose: {fileID: 2029429970}
+  player: {fileID: 1005454606}
+  transparency: {fileID: 2029429971}
+  damage_time_interval: 0.5
+  healing_time_interval: 3
 --- !u!114 &1014241643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,3 +1445,15 @@ Prefab:
     - {fileID: 114001494303911654, guid: c3af88e28bf7c0d4ab96783ddabbbf0b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c3af88e28bf7c0d4ab96783ddabbbf0b, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2029429970 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114432350579062372, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029429969}
+  m_Script: {fileID: 11500000, guid: a82f32822d9a01e409293b074beeb5d4, type: 3}
+--- !u!114 &2029429971 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114713387914689302, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029429969}
+  m_Script: {fileID: 11500000, guid: c168f7f40be07764699ba1fd3819d4cc, type: 3}
