@@ -17,8 +17,8 @@ public class IntroScript : MonoBehaviour {
 		Vector3 pos = obj.transform.position;
 		RectTransform r = (RectTransform) obj.transform;
 		Vector3 p2 = r.anchoredPosition;
-		if (p2.y < 2300) {
-			pos.y += 0.0002f;
+		if (p2.y < 4000) {
+			pos.y += 0.005f;
 			r.position = pos;
 		} else {
 			count++;
