@@ -12,6 +12,11 @@ public class SfuhrerBehaviour : MonoBehaviour {
     public Transform spawnPoints;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        InvokeRepeating("Shoot", 1f, 5f);
+    }
     void Update () {
 		// If the enemy and the player have health left...
 		//if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
@@ -25,11 +30,20 @@ public class SfuhrerBehaviour : MonoBehaviour {
         // ... disable the nav mesh agent.
         //nav.enabled = false;
         //}
-        Shoot();
+        
 	}
 
     void Shoot()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject saux = Instantiate(bullet, spawnPoints.position, spawnPoints.rotation);
+        }
+    }
+
+    void FinalShoot()
+    {
         GameObject saux = Instantiate(bullet, spawnPoints.position, spawnPoints.rotation);
+        
     }
 }
