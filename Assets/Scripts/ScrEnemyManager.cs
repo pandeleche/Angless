@@ -16,7 +16,7 @@ public class ScrEnemyManager : MonoBehaviour {
     {
         count = 0;
         difficult_level = 0;
-        InvokeRepeating("Difficulty", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
     // Update is called once per frame
@@ -33,8 +33,9 @@ public class ScrEnemyManager : MonoBehaviour {
     //Sawns an enemy in a spawn point chossen randomly
     void Spawn()
     {
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        GameObject saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Difficulty(difficult_level);
+        /* int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+        GameObject saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);*/
     }
 
     void Difficulty(int s)
