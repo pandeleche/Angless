@@ -17,9 +17,12 @@ public class LoseMessage : MonoBehaviour {
 		
 	}
 	void Player_lose(){
-		Transform aux = player;
-		aux.position += new Vector3(0.1f,0.0f,0.0f);
-		Instantiate (Restart_prefab,aux,true);
+        EnemyBehaviour.die = true;
+        ScrEnemyManager.difficult_level = -1;
+		Vector3 aux = player.position;
+        Quaternion aux2 = player.rotation;
+		aux += new Vector3(0.1f,0.0f,0.0f);
+		Instantiate (Restart_prefab, aux, aux2);
 		Screen_canvas_text.text = "YOU LOSE";
 		Screen_canvas_text.fontSize = 50;
 	}

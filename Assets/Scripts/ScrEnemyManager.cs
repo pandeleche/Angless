@@ -10,24 +10,24 @@ public class ScrEnemyManager : MonoBehaviour {
     public static int difficult_level;
     int count;                          //its to manage the difficult and control the time spawn
 
+
     
     // Use this for initialization
     void Start()
     {
         count = 0;
         difficult_level = 0;
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", 1f, 1f);
     }
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
-        //Update de difficulty
-        if (CutScript.score >= 10) IncreaseDifficulty();
-        else if (CutScript.score >= 20) IncreaseDifficulty();
-        else if (CutScript.score >= 30) IncreaseDifficulty();
-        else if (CutScript.score >= 40) IncreaseDifficulty();
-        else if (CutScript.score >= 50) IncreaseDifficulty();
+        // Update the difficulty
+        if (difficult_level < 5)
+        {
+            difficult_level = (int)(CutScript.score / 10);
+        }
     }
 
     //Sawns an enemy in a spawn point chossen randomly
@@ -101,6 +101,9 @@ public class ScrEnemyManager : MonoBehaviour {
                 saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
                 saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                break;
+            case -1:
+                // Don't spawn anything
                 break;
         }
     }
