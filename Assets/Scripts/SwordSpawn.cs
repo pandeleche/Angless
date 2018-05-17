@@ -26,9 +26,9 @@ public class SwordSpawn : MonoBehaviour
 
 
 	//-------------------------------------------------
-	void Start()
+	void OnEnable()
 	{
-		SpawnAndAttachObject (player.rightHand);
+		SpawnAndAttachObject (player.hands[0]);
 	}
 
 
@@ -134,7 +134,7 @@ public class SwordSpawn : MonoBehaviour
 		}
 
 		// if we're trying to spawn a two-handed item, remove one and two-handed items from both hands
-		if ( itemPackage.packageType == ItemPackage.ItemPackageType.TwoHanded )
+		else if ( itemPackage.packageType == ItemPackage.ItemPackageType.TwoHanded )
 		{
 			RemoveMatchingItemTypesFromHand( ItemPackage.ItemPackageType.OneHanded, hand );
 			RemoveMatchingItemTypesFromHand( ItemPackage.ItemPackageType.OneHanded, hand.otherHand );
@@ -146,7 +146,7 @@ public class SwordSpawn : MonoBehaviour
 		spawnedItem.SetActive( true );
 		hand.AttachObject( spawnedItem, attachmentFlags, attachmentPoint );
 
-		if ( ( itemPackage.otherHandItemPrefab != null ) && ( hand.otherHand.controller != null ) )
+		if ( ( itemPackage.otherHandItemPrefab != null ) )
 		{
 			GameObject otherHandObjectToAttach = GameObject.Instantiate( itemPackage.otherHandItemPrefab );
 			otherHandObjectToAttach.SetActive( true );
