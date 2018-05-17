@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth = startingHealth;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // If the enemy should be sinking...
         if (isSinking)
