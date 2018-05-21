@@ -256,9 +256,9 @@ MeshCollider:
   m_GameObject: {fileID: 1295421036890146}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -270,7 +270,7 @@ MeshCollider:
   m_GameObject: {fileID: 1060314201146898}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -289,6 +289,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   nav: {fileID: 195721769768782408}
+  bullet: {fileID: 0}
+  spawnPoints: {fileID: 0}
+  damp: 2
+  velocidadePerseguidor: 4
+  projectile: {fileID: 0}
+  speed: 20
 --- !u!114 &114558849005897578
 MonoBehaviour:
   m_ObjectHideFlags: 1

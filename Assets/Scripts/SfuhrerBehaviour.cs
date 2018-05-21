@@ -11,39 +11,70 @@ public class SfuhrerBehaviour : MonoBehaviour {
     public GameObject bullet;
     public Transform spawnPoints;
 
+    public int damp = 2;
+    public int  velocidadePerseguidor = 4;
+    public Rigidbody projectile;
+    public int speed = 20;
+
+    public static int sfurerHealth = 5;
+
     // Update is called once per frame
 
     private void Start()
     {
-        InvokeRepeating("Shoot", 1f, 5f);
+       InvokeRepeating("Shoot", 1f, 1f);
+        //InvokeRepeating("FinalShoot", 5f, 5f);
     }
-    void Update () {
-		// If the enemy and the player have health left...
-		//if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-		// {
-		// ... set the destination of the nav mesh agent to the player.
-		//nav.SetDestination(player.position);
-        // }
-        // Otherwise...
-        //else
-        //{
-        // ... disable the nav mesh agent.
-        //nav.enabled = false;
-        //}
-        
-	}
+    void Update()
+    {
+
+        if (Vector3.Distance(player.transform.position, transform.position) < 20)
+        {
+            // aqui podes poner animaciones
+            var rotate = Quaternion.LookRotation(-player.transform.position + transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotate, damp * Time.deltaTime);
+            var newVelocity = 0 - velocidadePerseguidor;
+            transform.Translate(0, 0, newVelocity * Time.deltaTime);
+
+        }
+        if (sfurerHealth <= 0)
+        {
+            FinalShoot();
+        }
+    }
+            
 
     void Shoot()
     {
-        for (int i = 0; i < 10; i++)
+        if (player != null)
         {
-            GameObject saux = Instantiate(bullet, spawnPoints.position, spawnPoints.rotation);
+
+            if (Vector3.Distance(player.transform.position, transform.position) < 20)
+            {
+                // aqui podes poner animaciones
+                
+                Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation);
+
+                Physics.IgnoreCollision(instantiatedProjectile.GetComponent<Collider>(), transform.root.GetComponent<Collider>());
+                Physics.IgnoreCollision(instantiatedProjectile.GetComponent<Collider>(), instantiatedProjectile.GetComponent<Collider>());
+                instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, 0 - speed));
+                
+            }
         }
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    GameObject saux = Instantiate(bullet, spawnPoints.position, spawnPoints.rotation);
+        //}
     }
 
     void FinalShoot()
     {
         GameObject saux = Instantiate(bullet, spawnPoints.position, spawnPoints.rotation);
         
+    }
+
+    void DecreaseLife()
+    {
+        sfurerHealth--;
     }
 }
