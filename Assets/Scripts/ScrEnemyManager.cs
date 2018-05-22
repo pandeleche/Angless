@@ -5,18 +5,20 @@ using UnityEngine;
 public class ScrEnemyManager : MonoBehaviour {
 
     public GameObject square;
+    public GameObject sfurer;
     public float spawnTime = 1f;
     public Transform[] spawnPoints;
+    public Transform spawnPointSfurer;
     public static int difficult_level;
     int count;                          //its to manage the difficult and control the time spawn
 
-
+    public static bool sfurerAlive = false;
     
     // Use this for initialization
     void Start()
     {
         count = 0;
-        difficult_level = 0;
+        difficult_level = 6;
         InvokeRepeating("Spawn", 1f, 1f);
     }
 
@@ -24,10 +26,20 @@ public class ScrEnemyManager : MonoBehaviour {
     private void FixedUpdate()
     {
         // Update the difficulty
-        if (difficult_level < 5)
+        if (difficult_level < 6)
         {
             difficult_level = (int)(CutScript.score / 10);
+        }else if (difficult_level == 6 && !sfurerAlive)
+        {
+            sfurerAlive = true;
+            CreateSfhurer();
         }
+    }
+
+    private void CreateSfhurer()
+    {
+        EnemyBehaviour.die = true;
+        GameObject saux = Instantiate(sfurer, spawnPointSfurer.position, spawnPointSfurer.rotation);
     }
 
     //Sawns an enemy in a spawn point chossen randomly

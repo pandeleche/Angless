@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 676459065}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,7 +320,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4920538748022224, guid: 6c42967e558c9c242964192b7b6b6354, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -44.1
+      value: -32.56
       objectReference: {fileID: 0}
     - target: {fileID: 4920538748022224, guid: 6c42967e558c9c242964192b7b6b6354, type: 2}
       propertyPath: m_LocalPosition.y
@@ -328,7 +328,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4920538748022224, guid: 6c42967e558c9c242964192b7b6b6354, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 39.5
+      value: -5.122
       objectReference: {fileID: 0}
     - target: {fileID: 4920538748022224, guid: 6c42967e558c9c242964192b7b6b6354, type: 2}
       propertyPath: m_LocalRotation.x
@@ -488,7 +488,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2054441876}
+      objectReference: {fileID: 0}
     - target: {fileID: 64780437157931470, guid: 6fb575e0bb435ec4b8fb04e418306287,
         type: 2}
       propertyPath: m_Convex
@@ -522,7 +522,7 @@ Prefab:
         type: 2}
     - target: {fileID: 4635659325291758, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.714
+      value: -0.515
       objectReference: {fileID: 0}
     - target: {fileID: 4635659325291758, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
       propertyPath: m_LocalPosition.y
@@ -533,11 +533,25 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54776180330216254, guid: 6fb575e0bb435ec4b8fb04e418306287,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 54776180330216254, guid: 6fb575e0bb435ec4b8fb04e418306287,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965413954160992, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
+      propertyPath: m_TagString
+      value: Sfurer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114494804215496004, guid: 6fb575e0bb435ec4b8fb04e418306287,
+        type: 2}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 280c64a6e5f5a1d4d971817bf60a921f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2054441876 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4050564151866598, guid: 1b4f318df694ce548bf1b4167111ca4b,
-    type: 2}
-  m_PrefabInternal: {fileID: 73226735}

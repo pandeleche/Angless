@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135238076803931956}
   - component: {fileID: 23693907641763178}
   - component: {fileID: 54195134946367410}
+  - component: {fileID: 114900972300893686}
   m_Layer: 0
   m_Name: "MiniSf\xFCrer"
   m_TagString: Cutable
@@ -273,6 +274,17 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114900972300893686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396323272509446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca68221e5173b649966a98ca90effd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135238076803931956
 SphereCollider:
   m_ObjectHideFlags: 1

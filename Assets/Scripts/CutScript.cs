@@ -67,11 +67,29 @@ public class CutScript : MonoBehaviour {
                 pieces[0].AddComponent<Rigidbody>();
                 pieces[0].AddComponent<BoxCollider>();
             }
-
-
-
             Destroy(pieces[1], 3);
             Destroy(pieces[0], 3);
+        }
+        else if (victim.CompareTag("Sfurer"))
+        {
+            enemyAudio.Play();
+            SfuhrerBehaviour.sfurerHealth--;
+            //SfuhrerBehaviour.sfurerInmunity = !SfuhrerBehaviour.sfurerInmunity;
+
+            if (SfuhrerBehaviour.sfurerHealth <= 0)
+            {
+                GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+
+                if (!pieces[1].GetComponent<Rigidbody>())
+                {
+                    pieces[1].AddComponent<Rigidbody>();
+                    pieces[1].AddComponent<BoxCollider>();
+                }
+
+                pieces[0].tag = "Sfurer";
+                
+                Destroy(pieces[1], 3);
+            }
         }
     }
 
