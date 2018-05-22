@@ -18,7 +18,7 @@ public class ScrEnemyManager : MonoBehaviour {
     void Start()
     {
         count = 0;
-        difficult_level = 6;
+        difficult_level = 0;
         InvokeRepeating("Spawn", 1f, 1f);
     }
 
@@ -26,11 +26,12 @@ public class ScrEnemyManager : MonoBehaviour {
     private void FixedUpdate()
     {
         // Update the difficulty
-        if (difficult_level < 6)
+        if (difficult_level < 5)
         {
             difficult_level = (int)(CutScript.score / 10);
-        }else if (difficult_level == 6 && !sfurerAlive)
+        }else if (CutScript.score >= 200 && !sfurerAlive)
         {
+            difficult_level = 6;
             sfurerAlive = true;
             CreateSfhurer();
         }

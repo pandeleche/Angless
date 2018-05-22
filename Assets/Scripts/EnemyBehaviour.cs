@@ -17,17 +17,20 @@ public class EnemyBehaviour : MonoBehaviour {
 
     void Awake()
     {
+
         // Set up the references.
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();
        // enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
         //nav.Warp(player.position);
+        InvokeRepeating("Sound", 1f, 1f);
     }
 
 
     void FixedUpdate()
     {
+        
             // ... set the destination of the nav mesh agent to the player.
         nav.SetDestination(player.position);
         if (die)
@@ -35,5 +38,13 @@ public class EnemyBehaviour : MonoBehaviour {
             Destroy(gameObject);
         }
      
+    }
+
+    void Sound()
+    {
+        if (Vector3.Distance(player.transform.position, transform.position)<=10)
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }
