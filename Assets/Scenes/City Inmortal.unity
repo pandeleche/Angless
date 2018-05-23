@@ -1320,7 +1320,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114581594204724804, guid: 3d6980dae82a1cd4d80e408ab669bc88,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114581594204724804, guid: 3d6980dae82a1cd4d80e408ab669bc88, type: 2}
+    - {fileID: 114996766434182960, guid: 3d6980dae82a1cd4d80e408ab669bc88, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3d6980dae82a1cd4d80e408ab669bc88, type: 2}
   m_IsPrefabParent: 0
 --- !u!20 &989694267 stripped
@@ -1403,7 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 1156831914061164, guid: 1b4f318df694ce548bf1b4167111ca4b, type: 2}
-  sfuhrer: {fileID: 1598171138238254, guid: ce02dc1941242204598b85035b897c0c, type: 2}
+  sfuhrer: {fileID: 1666632110745998, guid: ce02dc1941242204598b85035b897c0c, type: 2}
   killOnSfuhrer: 0
   spawnTime: 3
   spawnPoints:
