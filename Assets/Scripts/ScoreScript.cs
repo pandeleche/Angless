@@ -10,15 +10,19 @@ public class ScoreScript : MonoBehaviour {
 	public static int score = 0;
     private int actualScore;
 	public static float employed_time=0;
+    Color c;
 
 
-	private static float starting_time;
+    private static float starting_time;
 	// Use this for initialization
 	void Start () {
+        
         actualScore = score;
 		starting_time = Time.time;
         text_score.text = "Score: " + CutScript.score;
-	}
+        c = text_score.color;
+
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -43,7 +47,6 @@ public class ScoreScript : MonoBehaviour {
 
     IEnumerator LessScore()
     {
-        Color c = text_score.color;
         Color red = new Color(1, 0, 0, 1);
         text_score.color = red;
         yield return new WaitForSeconds(1f);
@@ -52,7 +55,7 @@ public class ScoreScript : MonoBehaviour {
 
     IEnumerator MoreScore()
     {
-        Color c = text_score.color;
+        
         Color green = new Color(0, 1, 0, 1);
         text_score.color = green;
         yield return new WaitForSeconds(1f);
