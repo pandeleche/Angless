@@ -62,7 +62,7 @@ public class ScrEnemyManager : MonoBehaviour {
     void Difficulty(int s)
     {
         int spawnPointIndex; 
-        GameObject saux;
+       
         switch (s)
         {
             case 0:
@@ -70,7 +70,7 @@ public class ScrEnemyManager : MonoBehaviour {
                 if (Count(3))
                 {
                     spawnPointIndex = 0;
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                 }
                 break;
             case 1:
@@ -78,7 +78,7 @@ public class ScrEnemyManager : MonoBehaviour {
                 if (Count(2))
                 {
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                 }
                 break;
             case 2:
@@ -86,9 +86,9 @@ public class ScrEnemyManager : MonoBehaviour {
                 if (Count(2))
                 {
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                 }
                 break;
             case 3:
@@ -96,32 +96,32 @@ public class ScrEnemyManager : MonoBehaviour {
                 if (Count(2))
                 {
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                     spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                    SpawnEnemy(spawnPointIndex);
                 }
                 break;
             case 4:
                 //3 square every second in all spawn points
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 break;
             case 5:
                 //4 square every second in all spawn points
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                SpawnEnemy(spawnPointIndex);
                 break;
             case -1:
                 // Don't spawn anything
