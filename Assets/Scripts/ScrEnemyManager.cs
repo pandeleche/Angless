@@ -12,13 +12,16 @@ public class ScrEnemyManager : MonoBehaviour {
     public Transform spawnPointSfuhrer;
     public static int difficult_level;
     int count;                          //its to manage the difficult and control the time spawn
+    public static int numEnemies;       //manage the amount of  enemies in the scene
 	int lastSfuhrer = 0;
 
     public static bool sfurerAlive = false;
-    
+    private int maxEnemies = 50;
+
     // Use this for initialization
     void Start()
     {
+        numEnemies = 0;
         count = 0;
         difficult_level = 0;
         ScoreScript.score = 0;
@@ -130,6 +133,18 @@ public class ScrEnemyManager : MonoBehaviour {
     {
         count++;
         return count%seconds == 0;
+    }
+
+    void SpawnEnemy(int index)
+    {
+        if (numEnemies < maxEnemies)
+        {
+            int spawnPointIndex = index;
+            GameObject saux;
+            saux = Instantiate(square, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            numEnemies++;
+        }
+        
     }
 }
 

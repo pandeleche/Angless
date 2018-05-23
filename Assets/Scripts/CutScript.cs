@@ -43,7 +43,7 @@ public class CutScript : MonoBehaviour {
                 pieces[0].AddComponent<BoxCollider>();
             }
 
-            
+            ScrEnemyManager.numEnemies--;
 
             Destroy(pieces[1], 3);
             Destroy(pieces[0], 3);
