@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour {
 
-    private Transform player;               // Reference to the player's position.
+    public Transform player;               // Reference to the player's position.
     //PlayerHealth playerHealth;      // Reference to the player's health.
     //EnemyHealth enemyHealth;        // Reference to this enemy's health.
     private NavMeshAgent nav;               // Reference to the nav mesh agent.
@@ -19,7 +19,8 @@ public class EnemyBehaviour : MonoBehaviour {
     {
 
         // Set up the references.
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();
        // enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();

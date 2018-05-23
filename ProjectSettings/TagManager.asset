@@ -10,6 +10,9 @@ TagManager:
   - Floor
   - Electronic
   - Epic
+  - FxTemporaire
+  - projectile
+  - Bullet
   layers:
   - Default
   - TransparentFX

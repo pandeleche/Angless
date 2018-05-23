@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7e615c177be8748b2142a72da80c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4181367469663980, guid: 3d6980dae82a1cd4d80e408ab669bc88, type: 2}
 --- !u!195 &195936743232224216
 NavMeshAgent:
   m_ObjectHideFlags: 1
