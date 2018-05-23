@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 1156831914061164, guid: 1b4f318df694ce548bf1b4167111ca4b, type: 2}
-  sfuhrer: {fileID: 1598171138238254, guid: ce02dc1941242204598b85035b897c0c, type: 2}
+  sfuhrer: {fileID: 1666632110745998, guid: ce02dc1941242204598b85035b897c0c, type: 2}
   killOnSfuhrer: 0
   spawnTime: 3
   spawnPoints:
