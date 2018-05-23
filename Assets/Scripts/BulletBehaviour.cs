@@ -11,4 +11,9 @@ public class BulletBehaviour : MonoBehaviour {
             gameObject.tag = "CutableHacendado";
         } 
     }
+
+    private void Start()
+    {
+        Destroy(this,15f);
+    }
 }
