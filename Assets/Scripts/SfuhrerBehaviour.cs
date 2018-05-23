@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class SfuhrerBehaviour : MonoBehaviour {
 	public Transform player;               // Reference to the player's position.
@@ -44,6 +45,7 @@ public class SfuhrerBehaviour : MonoBehaviour {
         if (sfurerHealth <= 0)
         {
             FinalShoot();
+			StartCoroutine(WinScreen());
         }
         else if(Vector3.Distance(player.transform.position, transform.position) < 200)
             {
@@ -110,4 +112,8 @@ public class SfuhrerBehaviour : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         this.gameObject.GetComponent<MeshRenderer>().material = normalMaterial;
     }
+	IEnumerator WinScreen(){
+		yield return new WaitForSeconds(4f);
+		ScoreScript.WinGame ();
+	}
 }

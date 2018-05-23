@@ -25,7 +25,7 @@ public class ScoreScript : MonoBehaviour {
 	}
 
 
-	void WinGame(){
+	public static void WinGame(){
 		employed_time = Time.time - starting_time;
 		SceneManager.LoadScene("WinningScene", LoadSceneMode.Single);
 	}
