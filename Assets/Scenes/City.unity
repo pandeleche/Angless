@@ -1413,7 +1413,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28c643d534949574582aebf9fb80da22, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2430,7 +2430,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005454606}
   - component: {fileID: 1005454609}
-  - component: {fileID: 1005454608}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2438,18 +2437,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1005454608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114638397256009528, guid: 3d6980dae82a1cd4d80e408ab669bc88,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1005454607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23e72b6a1de08bc45869a7f54608bf38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1005454609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3613,7 +3600,7 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 983343771}
     - target: {fileID: 224475379009967714, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
         type: 2}
       propertyPath: m_AnchoredPosition.x

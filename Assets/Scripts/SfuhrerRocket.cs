@@ -18,6 +18,7 @@ public class SfuhrerRocket : MonoBehaviour {
 
     public static int sfurerHealth = 5;
     public static int life = 5;
+    int cnt = 0;
     public static bool sfurerInmunity = true;
 
     public Material damagedMaterial;
@@ -34,7 +35,11 @@ public class SfuhrerRocket : MonoBehaviour {
     }
     void Update()
     {
-		FinalShoot();
+		if (cnt < 150)
+        {
+            FinalShoot();
+            cnt++;
+        }
     }
             
 

@@ -670,7 +670,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28c643d534949574582aebf9fb80da22, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1323,6 +1323,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d6980dae82a1cd4d80e408ab669bc88, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &989694267 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20216546325847976, guid: 3d6980dae82a1cd4d80e408ab669bc88,
+    type: 2}
+  m_PrefabInternal: {fileID: 989694266}
 --- !u!1 &1001478015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1883,7 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 989694267}
     - target: {fileID: 224475379009967714, guid: c3af88e28bf7c0d4ab96783ddabbbf0b,
         type: 2}
       propertyPath: m_AnchoredPosition.x

@@ -21,6 +21,8 @@ public class ScrEnemyManager : MonoBehaviour {
     {
         count = 0;
         difficult_level = 0;
+        ScoreScript.score = 0;
+        CutScript.score = 0;
         InvokeRepeating("Spawn", 1f, 1f);
     }
 
@@ -31,7 +33,7 @@ public class ScrEnemyManager : MonoBehaviour {
         if (difficult_level < 5)
         {
             difficult_level = (int)(CutScript.score / 50);
-		} else if (CutScript.score - lastSfuhrer >= 250 && !sfurerAlive)
+		} if (CutScript.score - lastSfuhrer >= 250 && !sfurerAlive)
         {
 			lastSfuhrer = CutScript.score;
             difficult_level = -1;

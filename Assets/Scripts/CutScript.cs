@@ -76,7 +76,7 @@ public class CutScript : MonoBehaviour {
             SfuhrerBehaviour.sfuhrerHealth--;
             //SfuhrerBehaviour.sfurerInmunity = !SfuhrerBehaviour.sfurerInmunity;
 
-            if (SfuhrerBehaviour.sfuhrerHealth <= 0)
+            if (SfuhrerBehaviour.life <= 0)
             {
                 GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
