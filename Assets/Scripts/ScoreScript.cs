@@ -11,7 +11,7 @@ public class ScoreScript : MonoBehaviour {
 	public static float employed_time=0;
 
 
-	private float starting_time;
+	private static float starting_time;
 	// Use this for initialization
 	void Start () {
 		starting_time = Time.time;
