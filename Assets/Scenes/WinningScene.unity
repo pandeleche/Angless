@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -152,9 +152,45 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82386440260627802, guid: 6fb575e0bb435ec4b8fb04e418306287,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82386440260627802, guid: 6fb575e0bb435ec4b8fb04e418306287,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 23e4ea064ca441c40974b21504be0969, type: 3}
+    m_RemovedComponents:
+    - {fileID: 114713498263887036, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2609414 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1444593120413946, guid: 6fb575e0bb435ec4b8fb04e418306287,
+    type: 2}
+  m_PrefabInternal: {fileID: 2609413}
+--- !u!114 &2609415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2609414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c73a61002a62449b4e1c75ef53d9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnPoints: {fileID: 0}
+  damp: 2
+  velocidadePerseguidor: 4
+  projectile: {fileID: 0}
+  speed: 20
+  damagedMaterial: {fileID: 0}
+  normalMaterial: {fileID: 0}
 --- !u!1 &172496945
 GameObject:
   m_ObjectHideFlags: 0
