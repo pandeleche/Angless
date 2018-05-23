@@ -26,7 +26,8 @@ public class SfuhrerRocket : MonoBehaviour {
     // Update is called once per frame
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Start()
     {
