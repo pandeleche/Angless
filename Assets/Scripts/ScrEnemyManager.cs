@@ -5,12 +5,14 @@ using UnityEngine;
 public class ScrEnemyManager : MonoBehaviour {
 
     public GameObject square;
-    public GameObject sfurer;
+    public GameObject sfuhrer;
+	public bool killOnSfuhrer = true;
     public float spawnTime = 1f;
     public Transform[] spawnPoints;
-    public Transform spawnPointSfurer;
+    public Transform spawnPointSfuhrer;
     public static int difficult_level;
     int count;                          //its to manage the difficult and control the time spawn
+	int lastSfuhrer = 0;
 
     public static bool sfurerAlive = false;
     
@@ -28,10 +30,11 @@ public class ScrEnemyManager : MonoBehaviour {
         // Update the difficulty
         if (difficult_level < 5)
         {
-            difficult_level = (int)(CutScript.score / 10);
-        }else if (CutScript.score >= 200 && !sfurerAlive)
+            difficult_level = (int)(CutScript.score / 50);
+		} else if (CutScript.score - lastSfuhrer >= 500 && !sfurerAlive)
         {
-            difficult_level = 6;
+			lastSfuhrer = CutScript.score;
+            difficult_level = -1;
             sfurerAlive = true;
             CreateSfhurer();
         }
@@ -39,8 +42,8 @@ public class ScrEnemyManager : MonoBehaviour {
 
     private void CreateSfhurer()
     {
-        EnemyBehaviour.die = true;
-        GameObject saux = Instantiate(sfurer, spawnPointSfurer.position, spawnPointSfurer.rotation);
+		EnemyBehaviour.die = killOnSfuhrer;
+        GameObject saux = Instantiate(sfuhrer, spawnPointSfuhrer.position, spawnPointSfuhrer.rotation);
     }
 
     //Sawns an enemy in a spawn point chossen randomly
@@ -121,20 +124,10 @@ public class ScrEnemyManager : MonoBehaviour {
         }
     }
 
-    void IncreaseDifficulty()
-    {
-        difficult_level++;
-    }
-
-    void DecreaseDifficulty()
-    {
-        difficult_level--;
-    }
-
     bool Count(int seconds)
     {
         count++;
-        return count%seconds==0;
+        return count%seconds == 0;
     }
 }
 

@@ -1834,7 +1834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 1156831914061164, guid: 1b4f318df694ce548bf1b4167111ca4b, type: 2}
-  sfurer: {fileID: 1444593120413946, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
+  sfuhrer: {fileID: 1444593120413946, guid: 6fb575e0bb435ec4b8fb04e418306287, type: 2}
+  killOnSfuhrer: 1
   spawnTime: 3
   spawnPoints:
   - {fileID: 1965404531}
@@ -1843,7 +1844,7 @@ MonoBehaviour:
   - {fileID: 657670328}
   - {fileID: 974778068}
   - {fileID: 1665624621}
-  spawnPointSfurer: {fileID: 940072477}
+  spawnPointSfuhrer: {fileID: 940072477}
 --- !u!4 &1051198648
 Transform:
   m_ObjectHideFlags: 0
