@@ -16,9 +16,10 @@ public class SfuhrerImmortalBehaviour : MonoBehaviour {
     public Rigidbody projectile;
     public int speed = 20;
 
-    public static int sfurerHealth = 5;
+    public static int sfuhrerHealth = 5;
     public static int life = 5;
-    public static bool sfurerInmunity = true;
+    public static bool sfuhrerInmunity = false;
+    private bool died = false;
 
     public Material damagedMaterial;
     public Material normalMaterial;
@@ -39,16 +40,35 @@ public class SfuhrerImmortalBehaviour : MonoBehaviour {
     }
     void Update()
     {
-        if (life != sfurerHealth)
+        if (!sfuhrerInmunity)
         {
-            StartCoroutine(Damage());
-            life = sfurerHealth;
+            if (life != sfuhrerHealth)
+            {
+                StartCoroutine(Damage());
+                StartCoroutine(Invulnerability());
+                life = sfuhrerHealth;
+            }
         }
-        if (sfurerHealth <= 0)
+        else
+        {
+            sfuhrerHealth = life;
+        }
+
+        if (sfuhrerHealth <= 0)
         {
 			FinalShoot();
-			cnt++;
+            if (!died)
+            {
+                died = true;
+                CutScript.score += 50;
+            }
+            cnt++;
 			if (cnt > 100) {
+            if (!died)
+            {
+                died = true;
+                CutScript.score += 50;
+            }
 				Destroy (gameObject);
 				ScrEnemyManager.difficult_level = 5;
 			}
@@ -108,7 +128,7 @@ public class SfuhrerImmortalBehaviour : MonoBehaviour {
 
     public void DecreaseLife()
     {
-        sfurerHealth--;
+        sfuhrerHealth--;
     }
 
     //Change the color
@@ -117,5 +137,12 @@ public class SfuhrerImmortalBehaviour : MonoBehaviour {
         this.gameObject.GetComponent<MeshRenderer>().material = damagedMaterial;
         yield return new WaitForSeconds(0.5f);
         this.gameObject.GetComponent<MeshRenderer>().material = normalMaterial;
+    }
+
+    IEnumerator Invulnerability()
+    {
+        sfuhrerInmunity = true;
+        yield return new WaitForSeconds(2f);
+        sfuhrerInmunity = false;
     }
 }

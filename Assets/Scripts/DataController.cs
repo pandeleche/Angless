@@ -26,7 +26,7 @@ public class DataController : MonoBehaviour {
 		return best_score;
 	}
 	public void checkScore(){
-		if (actual_score < best_score) {
+		if (actual_score > best_score) {
 			best_score = actual_score;
 			congratulations_text.text = "CONGRATULATIONS!!!!!";
 		}

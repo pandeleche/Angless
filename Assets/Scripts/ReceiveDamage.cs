@@ -18,8 +18,8 @@ public class ReceiveDamage : MonoBehaviour {
 		if (collision.gameObject.tag.Equals("Cutable") && last_damage<=UnityEngine.Time.time-damage_time_interval) {
             GetComponent<AudioSource>().Play();
 			Health_Points--;
-			NavMeshAgent nav = collision.gameObject.GetComponent<NavMeshAgent> ();
-			nav.SetDestination (new Vector3(-player.position.x,player.position.y,-player.position.z));
+			//NavMeshAgent nav = collision.gameObject.GetComponent<NavMeshAgent> ();
+			//nav.SetDestination (new Vector3(-player.position.x,player.position.y,-player.position.z));
 			last_damage = UnityEngine.Time.time;
 			transparency.Invoke ("DecreaseTransparency", 0.1f);
 		}

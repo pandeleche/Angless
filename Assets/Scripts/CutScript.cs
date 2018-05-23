@@ -73,10 +73,10 @@ public class CutScript : MonoBehaviour {
         else if (victim.CompareTag("Sfurer"))
         {
             enemyAudio.Play();
-            SfuhrerBehaviour.sfurerHealth--;
+            SfuhrerBehaviour.sfuhrerHealth--;
             //SfuhrerBehaviour.sfurerInmunity = !SfuhrerBehaviour.sfurerInmunity;
 
-            if (SfuhrerBehaviour.sfurerHealth <= 0)
+            if (SfuhrerBehaviour.sfuhrerHealth <= 0)
             {
                 GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 

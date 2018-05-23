@@ -16,9 +16,10 @@ public class SfuhrerBehaviour : MonoBehaviour {
     public Rigidbody projectile;
     public int speed = 20;
 
-    public static int sfurerHealth = 5;
+    public static int sfuhrerHealth = 5;
     public static int life = 5;
-    public static bool sfurerInmunity = true;
+    public static bool sfuhrerInmunity = false;
+    private bool died = false;
 
     public Material damagedMaterial;
     public Material normalMaterial;
@@ -37,24 +38,39 @@ public class SfuhrerBehaviour : MonoBehaviour {
     }
     void Update()
     {
-        if (life != sfurerHealth)
+        if (!sfuhrerInmunity)
         {
-            StartCoroutine(Damage());
-            life = sfurerHealth;
+            if (life != sfuhrerHealth)
+            {
+                StartCoroutine(Damage());
+                StartCoroutine(Invulnerability());
+                life = sfuhrerHealth;
+            }
+        } else
+        {
+            sfuhrerHealth = life;
         }
-        if (sfurerHealth <= 0)
+
+        if (sfuhrerHealth <= 0)
         {
             FinalShoot();
-			StartCoroutine(WinScreen());
-        }
-        else if(Vector3.Distance(player.transform.position, transform.position) < 200)
+            if (!died)
             {
-                // sfürer look to the player
-                var rotate = Quaternion.LookRotation(-player.transform.position + transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotate, damp * Time.deltaTime);
-                var newVelocity = 0 - velocidadePerseguidor;
-                transform.Translate(0, 0, newVelocity * Time.deltaTime);
+                died = true;
+                CutScript.score += 50;
             }
+            
+            StartCoroutine(WinScreen());
+        }
+        else if (Vector3.Distance(player.transform.position, transform.position) < 200)
+        {
+            // sfürer look to the player
+            var rotate = Quaternion.LookRotation(-player.transform.position + transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotate, damp * Time.deltaTime);
+            var newVelocity = 0 - velocidadePerseguidor;
+            transform.Translate(0, 0, newVelocity * Time.deltaTime);
+        }
+        
     }
             
 
@@ -102,7 +118,7 @@ public class SfuhrerBehaviour : MonoBehaviour {
 
     public void DecreaseLife()
     {
-        sfurerHealth--;
+        sfuhrerHealth--;
     }
 
     //Change the color
@@ -116,4 +132,11 @@ public class SfuhrerBehaviour : MonoBehaviour {
 		yield return new WaitForSeconds(4f);
 		ScoreScript.WinGame ();
 	}
+
+    IEnumerator Invulnerability()
+    {
+        sfuhrerInmunity = true;
+        yield return new WaitForSeconds(2f);
+        sfuhrerInmunity = false;
+    }
 }
