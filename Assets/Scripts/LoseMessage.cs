@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoseMessage : MonoBehaviour {
 	
@@ -17,6 +18,8 @@ public class LoseMessage : MonoBehaviour {
 		
 	}
 	void Player_lose(){
+		SceneManager.LoadScene("LoseScene", LoadSceneMode.Single);
+		/*
         EnemyBehaviour.die = true;
         ScrEnemyManager.difficult_level = -1;
 		Vector3 aux = player.position;
@@ -25,5 +28,6 @@ public class LoseMessage : MonoBehaviour {
 		Instantiate (Restart_prefab, aux, aux2);
 		Screen_canvas_text.text = "YOU LOSE";
 		Screen_canvas_text.fontSize = 50;
+		*/
 	}
 }
