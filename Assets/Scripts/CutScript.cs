@@ -91,6 +91,33 @@ public class CutScript : MonoBehaviour {
                 Destroy(pieces[1], 3);
             }
         }
+        else if (victim.CompareTag("Bullet"))
+        {
+            enemyAudio.Play();
+
+            GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+
+            if (!pieces[1].GetComponent<Rigidbody>())
+            {
+                pieces[1].AddComponent<Rigidbody>();
+                pieces[1].AddComponent<BoxCollider>();
+            }
+
+            if (!pieces[0].GetComponent<Rigidbody>())
+            {
+                pieces[0].GetComponent<NavMeshAgent>().enabled = false;
+                pieces[0].AddComponent<Rigidbody>();
+                pieces[0].AddComponent<BoxCollider>();
+            }
+
+
+            pieces[0].tag = "Epic";
+            pieces[1].tag = "Epic";
+            Destroy(pieces[1], 3);
+            Destroy(pieces[0], 3);
+
+            CutDone(transform.rotation.eulerAngles, 5);
+        }
     }
 
     //Calculates the score of the cut depending on the roll of the sword
