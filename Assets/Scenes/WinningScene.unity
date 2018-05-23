@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 03902d0b450add74fa144e9510fd0f85, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -401,32 +401,32 @@ Prefab:
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.27365118
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.961829
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 9.2
+      value: 10.441
       objectReference: {fileID: 0}
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
@@ -496,7 +496,7 @@ Prefab:
     - target: {fileID: 224609997205076268, guid: 6720939eed7c1c54293c4fa28fe62214,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 31.763002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6720939eed7c1c54293c4fa28fe62214, type: 2}
@@ -534,7 +534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1726912591}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!23 &571878316
 MeshRenderer:
@@ -580,7 +580,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -709,7 +709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.05000002, z: 20}
   m_Children: []
   m_Father: {fileID: 1726912591}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!23 &1111018071
 MeshRenderer:
@@ -755,7 +755,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -828,7 +828,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -845,12 +845,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1130249317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 141.3, z: -15.124}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -77.47601, z: 3.9300003}
+  m_LocalScale: {x: 1, y: 0.050000016, z: 20}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1726912591}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342576308
 GameObject:
@@ -881,7 +881,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.05000002, z: 20}
   m_Children: []
   m_Father: {fileID: 1726912591}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!23 &1342576310
 MeshRenderer:
@@ -927,7 +927,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1287,12 +1287,13 @@ Transform:
   m_LocalPosition: {x: 5.5, y: 62.7, z: -92.6}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children:
+  - {fileID: 1130249321}
   - {fileID: 1342576309}
   - {fileID: 1111018070}
   - {fileID: 1808182274}
   - {fileID: 571878315}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808182273
 GameObject:
@@ -1323,7 +1324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1726912591}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &1808182275
 MeshRenderer:
@@ -1369,7 +1370,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}

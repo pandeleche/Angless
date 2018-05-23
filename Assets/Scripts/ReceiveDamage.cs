@@ -15,7 +15,7 @@ public class ReceiveDamage : MonoBehaviour {
     private bool hasDiedBefore = false;
 
 	public void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.tag.Equals("Cutable") && last_damage<=UnityEngine.Time.time-damage_time_interval) {
+		if ((collision.gameObject.tag.Equals("Cutable") || collision.gameObject.tag.Equals("Bullet"))  && last_damage<=UnityEngine.Time.time-damage_time_interval) {
             GetComponent<AudioSource>().Play();
 			Health_Points--;
 			//NavMeshAgent nav = collision.gameObject.GetComponent<NavMeshAgent> ();
