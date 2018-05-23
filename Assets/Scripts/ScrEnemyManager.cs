@@ -33,7 +33,7 @@ public class ScrEnemyManager : MonoBehaviour {
         if (difficult_level < 5)
         {
             difficult_level = (int)(CutScript.score / 50);
-		} if (CutScript.score - lastSfuhrer >= 250 && !sfurerAlive)
+		} else if (CutScript.score - lastSfuhrer >= 250 && !sfurerAlive)
         {
 			lastSfuhrer = CutScript.score;
             difficult_level = -1;
