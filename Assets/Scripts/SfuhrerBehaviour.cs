@@ -28,6 +28,8 @@ public class SfuhrerBehaviour : MonoBehaviour {
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        SteamVR_Controller.Input(1).TriggerHapticPulse(500);
+        SteamVR_Controller.Input(0).TriggerHapticPulse(500);
     }
     private void Start()
     {

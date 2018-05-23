@@ -16,7 +16,7 @@ public class ScrEnemyManager : MonoBehaviour {
 	int lastSfuhrer = 0;
 
     public static bool sfurerAlive = false;
-    private int maxEnemies = 50;
+    private int maxEnemies = 40;
 
     // Use this for initialization
     void Start()
