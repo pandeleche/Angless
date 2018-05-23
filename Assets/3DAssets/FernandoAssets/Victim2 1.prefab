@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114621308287514038}
   - component: {fileID: 114641683069221496}
   m_Layer: 0
-  m_Name: VictimThrowable
+  m_Name: Victim2 1
   m_TagString: Cutable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

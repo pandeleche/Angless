@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public class SfuhrerBehaviour : MonoBehaviour {
+public class SfuhrerRocket : MonoBehaviour {
 	public Transform player;               // Reference to the player's position.
 	//PlayerHealth playerHealth;      // Reference to the player's health.
 	//EnemyHealth enemyHealth;        // Reference to this enemy's health.
