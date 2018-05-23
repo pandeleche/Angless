@@ -40,4 +40,6 @@ public class ReceiveDamage : MonoBehaviour {
             Health_Points++;
         }
     }
+
+    
 }
