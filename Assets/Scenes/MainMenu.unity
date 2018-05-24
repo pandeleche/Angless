@@ -2159,7 +2159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INMORTAL MODE
+  m_Text: IMMORTAL MODE
 --- !u!222 &1742803458
 CanvasRenderer:
   m_ObjectHideFlags: 0
