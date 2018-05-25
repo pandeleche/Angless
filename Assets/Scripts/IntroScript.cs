@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Valve.VR.InteractionSystem;
 
 public class IntroScript : MonoBehaviour {
 	public GameObject obj;
 	private int count;
+    public Hand hand1, hand2;
 	// Use this for initialization
 	void Start () {
 		count = 0;
@@ -22,9 +24,12 @@ public class IntroScript : MonoBehaviour {
 			r.position = pos;
 		} else {
 			count++;
-			if (count > 100) {
-				SceneManager.LoadScene("City", LoadSceneMode.Single);
-			}
 		}
-	}
+
+        if ((hand1.controller != null && hand1.controller.GetHairTriggerDown()) || (hand2.controller != null && hand2.controller.GetHairTriggerDown()) || count > 100)
+        {
+            SceneManager.LoadScene("City", LoadSceneMode.Single);
+        }
+
+    }
 }
