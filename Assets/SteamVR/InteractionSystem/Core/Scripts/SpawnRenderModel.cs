@@ -37,7 +37,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void OnEnable()
 		{
-			ShowController();
+			//ShowController();
 
 			renderModelLoadedAction.enabled = true;
 
@@ -60,7 +60,7 @@ namespace Valve.VR.InteractionSystem
 		private void OnAttachedToHand( Hand hand )
 		{
 			this.hand = hand;
-			ShowController();
+			//ShowController();
 		}
 
 

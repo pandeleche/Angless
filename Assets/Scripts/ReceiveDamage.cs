@@ -25,6 +25,17 @@ public class ReceiveDamage : MonoBehaviour {
 			last_damage = UnityEngine.Time.time;
 			transparency.Invoke ("DecreaseTransparency", 0.1f);
 		}
+		if (collision.gameObject.CompareTag ("Pick Up")) {
+			if (collision.gameObject.name.Contains ("MedBox")) {
+				if (Health_Points < 3) {
+					Health_Points = 5;
+					transparency.alpha = 1;
+				} else {
+					Health_Points = Health_Points + 2;
+					transparency.alpha += 0.4f;
+				}
+			}
+		}
 	}
 
 	public void FixedUpdate(){
@@ -36,11 +47,11 @@ public class ReceiveDamage : MonoBehaviour {
             hasDiedBefore = true;
         }
 
-        if (last_damage <= time-healing_time_interval && Health_Points < 5){
+       /* if (last_damage <= time-healing_time_interval && Health_Points < 5){
             last_damage = time;
 			transparency.Invoke ("IncreaseTransparency", 0.1f);
             Health_Points++;
-        }
+        }*/
     }
 
     

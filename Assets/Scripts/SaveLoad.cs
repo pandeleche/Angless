@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 
 
-public static class SaveLoad: MonoBehaviour {
+public static class SaveLoad{
 	
 	public static List<Game> savedGames = new List<Game>();
 
@@ -20,7 +20,7 @@ public static class SaveLoad: MonoBehaviour {
 	public static void Save(Game game) {
 		int index = savedGames.IndexOf (game);
 		savedGames.Remove (game);
-		savedGames.Insert (index, current);
+		savedGames.Insert (index, Game.current);
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create (Application.persistentDataPath + "/savedGames.gd");
 		bf.Serialize(file, SaveLoad.savedGames);
