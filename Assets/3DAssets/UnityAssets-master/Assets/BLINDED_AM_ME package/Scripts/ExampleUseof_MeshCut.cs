@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
 using UnityEngine.AI;
 
 public class ExampleUseof_MeshCut : MonoBehaviour {
